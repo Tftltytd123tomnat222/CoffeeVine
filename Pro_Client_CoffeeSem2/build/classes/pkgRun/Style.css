@@ -1,0 +1,13 @@
+/*
+    ADMIN XML CSS
+*/
+.menuleftAdmin{     
+  -fx-background-color: #ffffff ;
+  -fx-text-fill:#256b6f ;
+  -fx-font-weight:bold ; 
+  -fx-effect:innershadow(three-pass-box, rgba(46,61,73,0.2) ,0,2,0,0)
+}
+.menuleftAdmin:hover{     
+  -fx-background-color: #256b6f ;
+  -fx-text-fill: #ffffff
+}

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="460.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="pkgController.EditProductsCoffeeController">
+   <children>
+      <ImageView fitHeight="213.0" fitWidth="196.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         
+      </ImageView>
+      <JFXButton layoutX="244.0" layoutY="402.0" prefHeight="34.0" prefWidth="112.0" style="-fx-background-color: #66ccff; -fx-background-radius: 5em;" text="Lưu">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="31.0" layoutY="385.0" prefHeight="0.0" prefWidth="538.0" />
+      <HBox layoutX="200.0" layoutY="14.0" prefHeight="213.0" prefWidth="389.0">
+         <children>
+            <AnchorPane prefHeight="213.0" prefWidth="153.0">
+               <children>
+                  <VBox layoutX="8.0" prefHeight="213.0" prefWidth="144.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label prefHeight="37.0" prefWidth="179.0" text="Mã sản phẩm" textFill="#09967c">
+                           <VBox.margin>
+                              <Insets left="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="37.0" prefWidth="179.0" text="Tên sản phẩm" textFill="#979191">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="37.0" prefWidth="179.0" text="Đơn vị" textFill="#979191">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="37.0" prefWidth="179.0" text="Giá nhập" textFill="#979191">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="37.0" prefWidth="179.0" text="Giá bán">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="37.0" prefWidth="179.0" text="Trạng thái" textFill="#979191">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="213.0" prefWidth="236.0">
+               <children>
+                  <VBox layoutX="8.0" prefHeight="213.0" prefWidth="144.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXTextField prefHeight="35.0" prefWidth="236.0" unFocusColor="#f4e9e9" />
+                        <JFXTextField prefHeight="35.0" prefWidth="236.0" unFocusColor="#f4e9e9" />
+                        <JFXTextField prefHeight="35.0" prefWidth="236.0" unFocusColor="#f4e9e9" />
+                        <JFXTextField prefHeight="35.0" prefWidth="236.0" unFocusColor="#f4e9e9" />
+                        <JFXTextField prefHeight="35.0" prefWidth="236.0" unFocusColor="#f4e9e9" />
+                        <JFXTextField prefHeight="35.0" prefWidth="236.0" unFocusColor="#f4e9e9" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <VBox layoutX="14.0" layoutY="230.0" prefHeight="149.0" prefWidth="576.0">
+         <children>
+            <Label prefHeight="37.0" prefWidth="586.0" text="Ghi chú" textFill="#c31d1d">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField prefHeight="123.0" prefWidth="576.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

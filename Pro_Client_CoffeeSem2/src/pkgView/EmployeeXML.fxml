@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import com.jfoenix.controls.JFXNodesList?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anpTong" prefHeight="607.0" prefWidth="334.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgController.EmployeeXMLController">
+   <children>
+      <GridPane layoutX="97.0" layoutY="186.0" prefHeight="84.0" prefWidth="339.0" AnchorPane.bottomAnchor="523.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="298.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="298.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="45.0" prefWidth="339.0" style="-fx-background-color: #646875;" text="SYSTEM COFFEE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="147.0" prefWidth="340.0" style="-fx-background-color: #fffff;" GridPane.rowIndex="1">
+               <children>
+                  <Separator layoutY="129.0" prefHeight="3.0" prefWidth="339.0" />
+                  <ImageView fitHeight="150.0" fitWidth="30.0" layoutX="101.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXButton fx:id="btnQuayLaiEmp" layoutX="-4.0" layoutY="89.0" onAction="#onClickEmployee" prefHeight="43.0" prefWidth="51.0" text="&lt;">
+                     <font>
+                        <Font name="Berlin Sans FB" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="lblSoBan" alignment="CENTER" layoutX="115.0" layoutY="89.0" prefHeight="43.0" prefWidth="111.0">
+                     <font>
+                        <Font name="Dosis SemiBold" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnMenu" alignment="BASELINE_LEFT" layoutX="221.0" layoutY="91.0" onAction="#onClickEmployee" prefHeight="38.0" prefWidth="118.0" style="-fx-background-color: #ffffff;" text="Menu +++">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pkgImages/Admin/Checklist_38px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+               </children></AnchorPane>
+         </children>
+      </GridPane>
+      <AnchorPane fx:id="paneAddBill" layoutY="84.0" prefHeight="522.0" prefWidth="339.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <AnchorPane fx:id="imgAddToBill" layoutX="14.0" layoutY="14.0" prefHeight="69.0" prefWidth="95.0" />
+            <Label fx:id="lblNameAddToBill" layoutX="116.0" layoutY="14.0" prefHeight="32.0" prefWidth="211.0" text="Tên đồ uống ...">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ae3f3f" />
+                        <Stop color="#4d65bc" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="lblPriceAddToBill" alignment="CENTER_RIGHT" layoutX="116.0" layoutY="33.0" prefHeight="32.0" prefWidth="211.0" text="Giá : 20000 Đồng" textFill="#575a65">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtSLAddToBill" alignment="CENTER" layoutX="117.0" layoutY="102.0" prefHeight="65.0" prefWidth="105.0" text="0">
+               <font>
+                  <Font name="Arial Black" size="43.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="btnCongAddToBill" fitHeight="32.0" fitWidth="32.0" layoutX="230.0" layoutY="119.0" onMouseClicked="#onMouseAddBill" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pkgImages/Admin/Plus.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnTruAddToBill" fitHeight="32.0" fitWidth="32.0" layoutX="77.0" layoutY="119.0" onMouseClicked="#onMouseAddBill" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pkgImages/Admin/Minus.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnAddToBill" layoutX="111.0" layoutY="176.0" onAction="#onActionAddToBill" prefHeight="43.0" prefWidth="118.0" style="-fx-background-color: #4289a7; -fx-background-radius: 5em;" text="Thêm vào" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXTreeTableView fx:id="treeTableBill" layoutX="11.0" layoutY="234.0" prefHeight="279.0" prefWidth="318.0" />
+         </children></AnchorPane>
+       <AnchorPane fx:id="paneAddFood" layoutY="85.0" prefHeight="522.0" prefWidth="339.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ListView fx:id="listFood" prefHeight="522.0" prefWidth="381.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paneAddTable" layoutY="85.0" prefHeight="522.0" prefWidth="339.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ScrollPane prefHeight="500.0" prefWidth="381.0" style="-fx-background-color: #fffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="323.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <JFXMasonryPane fx:id="masonryPane" prefHeight="980.0" prefWidth="364.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <JFXNodesList fx:id="nodeListBill" layoutX="221.0" layoutY="83.0" prefHeight="240.0" prefWidth="116.0">
+         <children>
+            <VBox prefHeight="246.0" prefWidth="127.0">
+               <children>
+                  <JFXButton fx:id="btnLamMoi" alignment="BASELINE_LEFT" onAction="#onActionMenuOrder" prefHeight="38.0" prefWidth="119.0" style="-fx-background-color: #43516d;" text="Làm mới" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pkgImages/Admin/Reset_38px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnChuyenBan" alignment="BASELINE_LEFT" onAction="#onActionMenuOrder" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: #43516d;" text="Chuyển bàn" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pkgImages/Admin/Move-38.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnGopBan" alignment="BASELINE_LEFT" onAction="#onActionMenuOrder" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #43516d;" text="Gộp bàn" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pkgImages/Admin/Math-38.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnDangXuat" alignment="BASELINE_LEFT" onAction="#onActionMenuOrder" prefHeight="37.0" prefWidth="117.0" style="-fx-background-color: #43516d;" text="Đăng xuất" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../pkgImages/Admin/Close%20Sign_38px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets top="7.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="11.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </JFXNodesList>
+     
+   </children>
+</AnchorPane>

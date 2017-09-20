@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Pro_Client_CoffeeSem2.jnlp">
+  <information>
+    <title>Pro_Client_CoffeeSem2</title>
+    <vendor>Tom W</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Pro_Client_CoffeeSem2.jar" size="3861962" download="eager" />
+    <jar href="lib\Pro_LibCoffeeSem2.jar" size="39527" download="eager" />
+    <jar href="lib\TrayNotification.jar" size="41019" download="eager" />
+    <jar href="lib\controlsfx-8.40.13.jar" size="1213306" download="eager" />
+    <jar href="lib\flow-8.0b8.jar" size="63203" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\jasperreports-0.6.3.jar" size="598373" download="eager" />
+    <jar href="lib\jasperreports-functions-6.4.0.jar" size="32115" download="eager" />
+    <jar href="lib\jfoenix-0.0.0-SNAPSHOT-retrolambda.jar" size="2441332" download="eager" />
+    <jar href="lib\poi-3.16.jar" size="2679259" download="eager" />
+    <jar href="lib\sqljdbc42.jar" size="891490" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Pro_Client_CoffeeSem2" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="pkgRun.MainClient"  name="Pro_Client_CoffeeSem2" />
+  <update check="always"/>
+</jnlp>

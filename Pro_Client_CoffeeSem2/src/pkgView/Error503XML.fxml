@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="408.0" prefWidth="627.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgController.ErrorXMLController">
+   <children>
+      <ImageView fitHeight="165.0" fitWidth="246.0" layoutX="193.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pkgImages/Coffee/error500.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="246.0" layoutY="35.0" prefHeight="107.0" prefWidth="137.0" text="503" textFill="#dd3a3a">
+         <font>
+            <Font name="Agency FB" size="96.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="243.0" layoutY="130.0" prefHeight="21.0" prefWidth="146.0" text="Service Unavailable" textFill="#ab9696">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="134.0" layoutY="164.0" text="Server không thể trả lời vì quá bận hoặc đang được bảo trì." textFill="#8d8181">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

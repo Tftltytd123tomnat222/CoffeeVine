@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.0.final using JasperReports Library version 6.2.0  -->
+<!-- 2016-02-07T14:48:12 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="farmersReport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a54652f9-3e32-4c6c-8595-1cb4e910bb93">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from mg_farmers]]>
+	</queryString>
+	<field name="Statis" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Mã phiếu" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Ngày lập" class="java.lang.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Tên hàng" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Số lượng" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Ghi chú" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="6" width="600" height="30" uuid="3e5284cd-c332-42e7-a74f-71a97b8438d5"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MUGAGA FACTORY  ALL STATISTICAL]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="90" height="30" uuid="df6bb1f6-a8fe-4612-a0d7-44c237f0ab80"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mã phiếu]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="0" width="89" height="30" uuid="b195f059-6648-4c96-849c-9e759727083b"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ngày lập]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="0" width="89" height="30" uuid="cd9c9988-b6f2-44fb-9e52-e149a45ede9a"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tên hàng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="0" width="89" height="30" uuid="eacc8e62-8253-44b5-b0ac-d667937cdbd1"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Số lượng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="357" y="0" width="89" height="30" uuid="96f3b50e-2560-4582-876d-4d2618255e1a"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ghi chú]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="8" width="90" height="30" uuid="f37ddaa9-7339-4b84-a378-b5746fb3a65d"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Statis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="8" width="89" height="30" uuid="7f0c18d7-61ad-4c71-96dd-6980903357ee"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Mã phiếu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="179" y="8" width="89" height="30" uuid="cf6fec32-20e6-4bb6-875a-e68140e99620"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Ngày lập}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="8" width="89" height="30" uuid="8f253a6e-9a3e-4210-9173-61f37f224ffa"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Tên hàng}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="357" y="8" width="89" height="30" uuid="7b125701-c08a-4594-b157-643d506db22b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Số lượng}]]></textFieldExpression>
+			<textField>
+				<reportElement x="713" y="8" width="89" height="30" uuid="26201f0a-2447-4cf8-99ab-1d6b137a72e7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{Ghi chú}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="44" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="10" y="10" width="169" height="30" uuid="f452c36c-fbcb-4dc2-afba-26df6b400749"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="620" y="10" width="160" height="30" uuid="5cd966bd-5658-4fb6-8a63-9d3e95dfc954"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

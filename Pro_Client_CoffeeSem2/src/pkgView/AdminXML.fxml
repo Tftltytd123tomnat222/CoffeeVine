@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXMasonryPane?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import java.lang.Double?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" prefHeight="619.0" prefWidth="1130.0" style="-fx-background-color: none;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgController.AdminXMLController">
+    <children>
+        <AnchorPane layoutX="150.0" style="-fx-background-color: #ffffff;">
+            <children>
+            
+                
+                
+                <!-- TRANG CHỦ -->
+                <AnchorPane fx:id="anpTrangchu" prefHeight="651.0" prefWidth="1050.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <ImageView fitHeight="128.0" fitWidth="227.0" layoutX="23.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../pkgImages/Coffee/vector-coffee.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="133.0" fitWidth="696.0" layoutX="157.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../pkgImages/Coffee/banner_bg_2.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="536.0" fitWidth="1052.0" layoutX="-1.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../pkgImages/Coffee/coffebanner.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="269.0" fitWidth="255.0" layoutX="796.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../pkgImages/Coffee/hoavan1.png" />
+                            </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="136.0" prefHeight="133.0" prefWidth="778.0" text="VINE COFFEE">
+                            <font>
+                                <Font name="Agency FB" size="96.0" />
+                            </font>
+                            <textFill>
+                                <RadialGradient centerX="0.5" centerY="0.5047619047619047" cycleMethod="REPEAT" focusAngle="-14.74" radius="1.0">
+                                    <stops>
+                                        <Stop color="WHITE" />
+                                        <Stop color="WHITE" offset="0.007662835249042145" />
+                                        <Stop color="#1e1111" offset="0.28016747639925726" />
+                                        <Stop color="#436570" offset="0.570604731998262" />
+                                        <Stop color="#ffa5a5" offset="0.578544061302682" />
+                                        <Stop color="#446672" offset="0.9425287356321839" />
+                                        <Stop color="#446672" offset="1.0" />
+                                    </stops>
+                                </RadialGradient>
+                            </textFill>
+                        </Label>
+                        <Label alignment="TOP_RIGHT" layoutX="879.0" layoutY="133.0" prefHeight="20.0" prefWidth="159.0" text="SYSTEM COFFEE" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="879.0" layoutY="153.0" prefHeight="20.0" prefWidth="159.0" text="ĐC : 38 Yên Bái , Đà Nẵng" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                <!-- HỔ TRỢ -->
+                <AnchorPane fx:id="anpHoTro" prefHeight="650.0" prefWidth="1036.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <AnchorPane layoutX="6.0" layoutY="122.0" prefHeight="277.0" prefWidth="362.0" style="-fx-background-color: #232222;">
+                            <children>
+                                <ImageView fitHeight="279.0" fitWidth="268.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../pkgImages/Admin/contactus.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="btnFacebookContact" fitHeight="46.0" fitWidth="46.0" layoutX="290.0" layoutY="38.0" onMouseClicked="#onMouseButtonContact" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../pkgImages/Admin/Facebook-46.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="btnYoutubeContact" fitHeight="46.0" fitWidth="46.0" layoutX="290.0" layoutY="93.0" onMouseClicked="#onMouseButtonContact" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../pkgImages/Admin/YouTube-46.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="btnTwitterContact" fitHeight="46.0" fitWidth="46.0" layoutX="290.0" layoutY="146.0" onMouseClicked="#onMouseButtonContact" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../pkgImages/Admin/Twitter-46.png" />
+                                    </image>
+                                </ImageView>
+                                <ImageView fx:id="btnSkypeContact" fitHeight="46.0" fitWidth="46.0" layoutX="290.0" layoutY="203.0" onMouseClicked="#onMouseButtonContact" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../pkgImages/Admin/Skype-46.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </AnchorPane>
+                        <Label layoutX="459.0" layoutY="24.0" text="HỔ TRỢ">
+                            <font>
+                                <Font name="Monospaced Bold" size="33.0" />
+                            </font>
+                            <textFill>
+                                <LinearGradient endX="1.0" endY="0.5761904761904761" startY="0.11904761904761907">
+                                    <stops>
+                                        <Stop color="#f55454" />
+                                        <Stop color="#97ee3f" offset="1.0" />
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                        </Label>
+                        <Label alignment="CENTER" ellipsisString="" layoutX="167.0" layoutY="64.0" prefHeight="29.0" prefWidth="703.0" text="Liên hệ với chúng tôi nếu bạn gặp vấn đề gì  hoặc năng cấp thêm về phần mềm của bạn" textFill="#837f7f">
+                            <font>
+                                <Font size="17.0" />
+                            </font>
+                        </Label>
+                        <WebView fx:id="webMap" layoutX="375.0" layoutY="122.0" prefHeight="523.0" prefWidth="654.0" />
+                        <AnchorPane layoutX="6.0" layoutY="406.0" prefHeight="238.0" prefWidth="362.0" style="-fx-border-color: #e4e2e2;">
+                            <children>
+                                <JFXTextField layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="159.0" promptText="Tên" />
+                                <JFXTextField layoutX="189.0" layoutY="14.0" prefHeight="25.0" prefWidth="159.0" promptText="địa chỉ" />
+                                <JFXTextField layoutX="14.0" layoutY="50.0" prefHeight="25.0" prefWidth="159.0" promptText="email" />
+                                <JFXTextField layoutX="189.0" layoutY="50.0" prefHeight="25.0" prefWidth="159.0" promptText="Số điện thoại" />
+                                <JFXTextArea layoutX="14.0" layoutY="90.0" prefHeight="90.0" prefWidth="334.0" promptText="Nội dung ..." />
+                                <JFXButton layoutX="241.0" layoutY="192.0" prefHeight="20.0" prefWidth="107.0" style="-fx-background-color: #00acee; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Gửi " textFill="WHITE">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </JFXButton>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+            
+               
+               
+            
+               
+                           
+             
+                <!-- THỰC ĐƠN -->
+                <AnchorPane fx:id="anpMenu" layoutX="20.0" layoutY="20.0" prefHeight="650.0" prefWidth="1036.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label alignment="CENTER" layoutX="312.0" layoutY="14.0" prefHeight="40.0" prefWidth="428.0" text="THỰC ĐƠN ĐỒ UỐNG">
+                            <font>
+                                <Font name="Monospaced Bold" size="33.0" />
+                            </font>
+                            <textFill>
+                                <LinearGradient endX="1.0" endY="0.5761904761904761" startY="0.11904761904761907">
+                                    <stops>
+                                        <Stop color="#f55454" />
+                                        <Stop color="#97ee3f" offset="1.0" />
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                        </Label>
+                        <Line endX="100.0" layoutX="526.0" layoutY="54.0" startX="-100.0" />
+                        <AnchorPane layoutX="7.0" layoutY="64.0" prefHeight="580.0" prefWidth="1036.0">
+                            <children>
+                                <JFXTabPane prefHeight="580.0" prefWidth="1036.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <tabs>
+                                        <Tab text="Tất cả">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <HBox layoutX="40.0" layoutY="92.0" prefHeight="545.0" prefWidth="1036.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <GridPane prefHeight="545.0" prefWidth="526.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="409.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                </GridPane>
+                                                                <GridPane prefHeight="545.0" prefWidth="526.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="409.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                </GridPane>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Cafe">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <HBox layoutX="40.0" layoutY="92.0" prefHeight="545.0" prefWidth="1036.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <GridPane prefHeight="545.0" prefWidth="526.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="409.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                </GridPane>
+                                                                <GridPane prefHeight="545.0" prefWidth="526.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="409.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                </GridPane>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Trà">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <HBox layoutX="40.0" layoutY="92.0" prefHeight="545.0" prefWidth="1036.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <GridPane prefHeight="545.0" prefWidth="526.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="409.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                </GridPane>
+                                                                <GridPane prefHeight="545.0" prefWidth="526.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="409.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                </GridPane>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Nước ép">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <HBox layoutX="40.0" layoutY="92.0" prefHeight="545.0" prefWidth="1036.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <GridPane prefHeight="545.0" prefWidth="526.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="409.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                </GridPane>
+                                                                <GridPane prefHeight="545.0" prefWidth="526.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="409.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                </GridPane>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Nước uống">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <HBox layoutX="40.0" layoutY="92.0" prefHeight="545.0" prefWidth="1036.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <GridPane prefHeight="545.0" prefWidth="526.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="409.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                </GridPane>
+                                                                <GridPane prefHeight="545.0" prefWidth="526.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="409.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                </GridPane>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                        <Tab text="Phát sinh">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <HBox layoutX="40.0" layoutY="92.0" prefHeight="545.0" prefWidth="1036.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <GridPane prefHeight="545.0" prefWidth="526.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="409.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                </GridPane>
+                                                                <GridPane prefHeight="545.0" prefWidth="526.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="110.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="421.0" minWidth="10.0" prefWidth="409.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                </GridPane>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </Tab>
+                                    </tabs>
+                                </JFXTabPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+
+                </AnchorPane>  
+
+                
+                <!-- THỐNG KÊ -->
+                <AnchorPane fx:id="anpThongKe" layoutX="10.0" layoutY="10.0" prefHeight="650.0" prefWidth="1036.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <HBox layoutY="54.0" prefHeight="596.0" prefWidth="1049.0">
+                            <children>
+                                <AnchorPane prefHeight="596.0" prefWidth="274.0">
+                                    <children>
+                                        <Label layoutY="-3.0" prefHeight="34.0" prefWidth="274.0" text="THỐNG KÊ DOANH THU">
+                                            <textFill>
+                                                <LinearGradient endY="1.0" startY="0.3761904761904762">
+                                                    <stops>
+                                                        <Stop color="#653252" />
+                                                        <Stop color="#d0a3c8" offset="1.0" />
+                                                    </stops>
+                                                </LinearGradient>
+                                            </textFill>
+                                            <padding>
+                                                <Insets left="10.0" />
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Separator layoutX="271.0" layoutY="8.0" orientation="VERTICAL" prefHeight="569.0" prefWidth="6.0" />
+                                        <GridPane layoutX="9.0" layoutY="42.0" prefHeight="400.0" prefWidth="255.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <JFXButton fx:id="btnExcel_TK" onAction="#onActionThongKe" prefHeight="42.0" prefWidth="273.0" style="-fx-background-color: #64a87d;" text="IN EXCEL" textFill="WHITE" GridPane.rowIndex="3">
+                                                    <graphic>
+                                                        <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../pkgImages/Admin/Microsoft_Excel_38px.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </JFXButton>
+                                                <JFXDatePicker defaultColor="#751616" prefHeight="7.0" prefWidth="255.0" promptText="Từ ngày">
+                                                    <padding>
+                                                        <Insets left="30.0" />
+                                                    </padding>
+                                                </JFXDatePicker>
+                                                <JFXDatePicker prefHeight="11.0" prefWidth="255.0" promptText="Đến ngày" GridPane.rowIndex="1">
+                                                    <padding>
+                                                        <Insets left="30.0" />
+                                                    </padding>
+                                                </JFXDatePicker>
+                                                <JFXButton fx:id="btnIn_TK" onAction="#onActionThongKe" prefHeight="33.0" prefWidth="255.0" style="-fx-background-color: #93b4ba;" text="IN MÁY A4" textFill="WHITE" GridPane.rowIndex="4">
+                                                    <graphic>
+                                                        <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../pkgImages/Admin/Print_38px.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </JFXButton>
+                                                <JFXButton fx:id="btnViewTable_TK" onAction="#onActionThongKe" prefHeight="32.0" prefWidth="255.0" style="-fx-background-color: #b51c48;" text="XEM BẢNG" textFill="WHITE" GridPane.rowIndex="5">
+                                                    <graphic>
+                                                        <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../pkgImages/Admin/Checklist_38px.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </JFXButton>
+                                                <JFXButton fx:id="btnViewChart_TK" onAction="#onActionThongKe" prefHeight="27.0" prefWidth="255.0" style="-fx-background-color: #c6b08d;" text="XEM BIỂU ĐỒ" textFill="WHITE" GridPane.rowIndex="6">
+                                                    <graphic>
+                                                        <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../pkgImages/Admin/Increase_38px_1.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </JFXButton>
+                                                <JFXButton fx:id="btnMoney_TK" onAction="#onActionThongKe" prefHeight="21.0" prefWidth="255.0" style="-fx-background-color: #369b87;" text="TỔNG TIỀN" textFill="WHITE" GridPane.rowIndex="7">
+                                                    <graphic>
+                                                        <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../pkgImages/Admin/Money-38.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </JFXButton>
+                                                <JFXButton fx:id="btnReset_TK" onAction="#onActionThongKe" prefHeight="36.0" prefWidth="255.0" style="-fx-background-color: #d3e2be;" text="TẠO MỚI" textFill="#514646" GridPane.rowIndex="8">
+                                                    <graphic>
+                                                        <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../pkgImages/Admin/Reset_38px.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </JFXButton>
+                                            </children>
+                                        </GridPane>
+                                        <ImageView fitHeight="133.0" fitWidth="255.0" layoutX="8.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../pkgImages/Coffee/coffebanner.jpg" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="547.0" prefWidth="775.0">
+                                    <children>
+                                        <Label prefHeight="34.0" prefWidth="775.0" text="BẢNG THỐNG KÊ">
+                                            <textFill>
+                                                <LinearGradient endY="1.0" startY="0.3761904761904762">
+                                                    <stops>
+                                                        <Stop color="#653252" />
+                                                        <Stop color="#d0a3c8" offset="1.0" />
+                                                    </stops>
+                                                </LinearGradient>
+                                            </textFill>
+                                            <padding>
+                                                <Insets left="10.0" />
+                                            </padding>
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <AnchorPane layoutX="8.0" layoutY="34.0" prefHeight="556.0" prefWidth="758.0">
+                                            <children>
+                                                <AnchorPane fx:id="anpTongTienThuNhap" prefHeight="556.0" prefWidth="758.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <Label fx:id="txtTongTienThuNhap" alignment="CENTER" layoutX="46.0" layoutY="218.0" prefHeight="120.0" prefWidth="666.0" textFill="#571313">
+                                                            <font>
+                                                                <Font name="System Bold" size="59.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label layoutX="237.0" layoutY="123.0" text="TỔNG TIỀN THU NHẬP">
+                                                            <font>
+                                                                <Font size="28.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane fx:id="anpChart_TK" prefHeight="556.0" prefWidth="758.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <LineChart layoutX="36.0" layoutY="30.0" prefHeight="556.0" prefWidth="758.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <xAxis>
+                                                                <CategoryAxis side="BOTTOM" />
+                                                            </xAxis>
+                                                            <yAxis>
+                                                                <NumberAxis side="LEFT" />
+                                                            </yAxis>
+                                                        </LineChart>
+                                                    </children>
+                                                </AnchorPane>
+                                                <AnchorPane fx:id="anpTable_TK" layoutX="14.0" layoutY="41.0" prefHeight="556.0" prefWidth="758.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <TableView fx:id="TableExprot" layoutX="41.0" layoutY="26.0" prefHeight="556.0" prefWidth="758.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <columns>
+                                                                <TableColumn fx:id="colID" prefWidth="106.0" text="Mã phiếu" />
+                                                                <TableColumn fx:id="colDate" prefWidth="118.0" text="Ngày lập" />
+                                                                <TableColumn fx:id="colName" prefWidth="233.0" text="Tên mặt hàng" />
+                                                                <TableColumn fx:id="colNumber" prefWidth="151.0" text="Số lượng" />
+                                                                <TableColumn fx:id="colNote" prefWidth="149.0" text="Ghi chú" />
+                                                            </columns>
+                                                        </TableView>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </HBox>
+                        <Label alignment="CENTER" layoutX="322.0" layoutY="14.0" prefHeight="40.0" prefWidth="406.0" text="THỐNG KÊ BÁN HÀNG">
+                            <font>
+                                <Font name="Monospaced Bold" size="33.0" />
+                            </font>
+                            <textFill>
+                                <LinearGradient endX="1.0" endY="0.5761904761904761" startY="0.11904761904761907">
+                                    <stops>
+                                        <Stop color="#f55454" />
+                                        <Stop color="#97ee3f" offset="1.0" />
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                        </Label>
+                        <Line endX="100.0" layoutX="525.0" layoutY="54.0" startX="-100.0" />
+                    </children>
+                </AnchorPane> 
+                
+                <!-- HÓA ĐƠN -->
+                <AnchorPane fx:id="anpHoaDon" layoutX="50.0" layoutY="50.0" prefHeight="650.0" prefWidth="1036.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Label alignment="CENTER" layoutX="316.0" layoutY="14.0" prefHeight="40.0" prefWidth="406.0" text="BÀN - HÓA ĐƠN">
+                            <font>
+                                <Font name="Monospaced Bold" size="33.0" />
+                            </font>
+                            <textFill>
+                                <LinearGradient endX="1.0" endY="0.5761904761904761" startY="0.11904761904761907">
+                                    <stops>
+                                        <Stop color="#f55454" />
+                                        <Stop color="#97ee3f" offset="1.0" />
+                                    </stops>
+                                </LinearGradient>
+                            </textFill>
+                        </Label>
+                        <AnchorPane layoutX="1.0" layoutY="55.0" prefHeight="596.0" prefWidth="1036.0">
+                            <children>
+                                <HBox prefHeight="596.0" prefWidth="1036.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane prefHeight="596.0" prefWidth="430.0">
+                                            <children>
+                                                <Label layoutY="-2.0" prefHeight="34.0" prefWidth="372.0" text="KHU VỰC BÀN">
+                                                    <textFill>
+                                                        <LinearGradient endY="1.0" startY="0.3761904761904762">
+                                                            <stops>
+                                                                <Stop color="#653252" />
+                                                                <Stop color="#d0a3c8" offset="1.0" />
+                                                            </stops>
+                                                        </LinearGradient>
+                                                    </textFill>
+                                                    <padding>
+                                                        <Insets left="10.0" />
+                                                    </padding>
+                                                    <font>
+                                                        <Font name="System Bold" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <Separator layoutX="369.0" layoutY="6.0" orientation="VERTICAL" prefHeight="588.0" prefWidth="6.0" />
+                                                <Line endX="100.0" layoutX="188.0" layoutY="423.0" startX="-100.0" />
+                                                <GridPane layoutX="14.0" layoutY="522.0" prefHeight="45.0" prefWidth="349.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <JFXButton fx:id="btnDeleteTable" onAction="#onActionTable" prefHeight="45.0" prefWidth="128.0" style="-fx-background-color: #ed6d8d;" text="Xóa" textFill="WHITE" GridPane.columnIndex="2">
+                                                            <font>
+                                                                <Font name="Bauhaus 93" size="13.0" />
+                                                            </font>
+                                                            <graphic>
+                                                                <ImageView fitHeight="25.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../pkgImages/Admin/Close-38.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </JFXButton>
+                                                        <JFXButton fx:id="btnResetTable" onAction="#onActionTable" prefHeight="45.0" prefWidth="111.0" style="-fx-background-color: #e8dd7d;" text="Reset" GridPane.columnIndex="1">
+                                                            <font>
+                                                                <Font name="Bauhaus 93" size="13.0" />
+                                                            </font>
+                                                            <graphic>
+                                                                <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../pkgImages/Admin/Reset_38px.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </JFXButton>
+                                                        <JFXButton fx:id="btnAddTable" onAction="#onActionTable" prefHeight="45.0" prefWidth="113.0" style="-fx-background-color: #88e8ba;" text="Thêm">
+                                                            <font>
+                                                                <Font name="Bauhaus 93" size="13.0" />
+                                                            </font>
+                                                            <graphic>
+                                                                <ImageView fitHeight="24.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../pkgImages/Admin/Plus.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                        </JFXButton>
+                                                    </children>
+                                                </GridPane>
+                                                <VBox layoutX="14.0" layoutY="432.0" prefHeight="84.0" prefWidth="107.0">
+                                                    <children>
+                                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7e9189" height="28.0" stroke="WHITE" strokeType="INSIDE" width="106.0" />
+                                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fad7f" height="28.0" stroke="WHITE" strokeType="INSIDE" width="106.0" />
+                                                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d04f69" height="28.0" stroke="WHITE" strokeType="INSIDE" width="106.0" />
+                                                    </children>
+                                                </VBox>
+                                                <VBox layoutX="133.0" layoutY="432.0" prefHeight="84.0" prefWidth="227.0">
+                                                    <children>
+                                                        <Label prefHeight="27.0" prefWidth="227.0" text="BÀN TRỐNG">
+                                                            <textFill>
+                                                                <LinearGradient endX="1.0" endY="0.6523809523809524" startX="1.0">
+                                                                    <stops>
+                                                                        <Stop color="#bf3b3b" />
+                                                                        <Stop color="#25728a" offset="1.0" />
+                                                                    </stops>
+                                                                </LinearGradient>
+                                                            </textFill>
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label prefHeight="32.0" prefWidth="227.0" text="BÀN ĐANG CÓ KHÁCH">
+                                                            <textFill>
+                                                                <LinearGradient endX="1.0" endY="0.6523809523809524" startX="1.0">
+                                                                    <stops>
+                                                                        <Stop color="#bf3b3b" />
+                                                                        <Stop color="#25728a" offset="1.0" />
+                                                                    </stops>
+                                                                </LinearGradient>
+                                                            </textFill>
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label prefHeight="27.0" prefWidth="227.0" text="BÀN ĐÃ ĐƯỢC ĐẶT TRƯỚC">
+                                                            <textFill>
+                                                                <LinearGradient endX="1.0" endY="0.6523809523809524" startX="1.0">
+                                                                    <stops>
+                                                                        <Stop color="#bf3b3b" />
+                                                                        <Stop color="#25728a" offset="1.0" />
+                                                                    </stops>
+                                                                </LinearGradient>
+                                                            </textFill>
+                                                            <font>
+                                                                <Font name="System Bold" size="12.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                                <AnchorPane fx:id="anpTableFoodCoffee" layoutX="14.0" layoutY="32.0" prefHeight="377.0" prefWidth="337.0" style="-fx-background-color: #ffffff;">
+                                                    <children>
+                                                        <AnchorPane fx:id="anpPaneTable" prefHeight="377.0" prefWidth="337.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <ScrollPane prefHeight="377.0" prefWidth="337.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                    <content>
+                                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="322.0" style="-fx-background-color: #ffffff;">
+                                                                            <children>
+                                                                                <JFXMasonryPane fx:id="masonryPane" prefHeight="700.0" prefWidth="322.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                    </content>
+                                                                </ScrollPane>
+                                                            </children>
+                                                        </AnchorPane>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane prefHeight="596.0" prefWidth="420.0">
+                                            <children>
+                                                <Label prefHeight="34.0" prefWidth="362.0" text="THỰC ĐƠN">
+                                                    <textFill>
+                                                        <LinearGradient endY="1.0" startY="0.3761904761904762">
+                                                            <stops>
+                                                                <Stop color="#653252" />
+                                                                <Stop color="#d0a3c8" offset="1.0" />
+                                                            </stops>
+                                                        </LinearGradient>
+                                                    </textFill>
+                                                    <padding>
+                                                        <Insets left="10.0" />
+                                                    </padding>
+                                                    <font>
+                                                        <Font name="System Bold" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <Separator layoutX="365.0" layoutY="8.0" orientation="VERTICAL" prefHeight="588.0" prefWidth="6.0" />
+                                                <JFXTabPane layoutX="7.0" layoutY="34.0" prefHeight="543.0" prefWidth="349.0">
+                                                    <tabs>
+                                                        <Tab text="TẤT CẢ">
+                                                            <content>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="365.0">
+                                                                    <children>
+                                                                        <ListView fx:id="listFood" layoutX="14.0" layoutY="24.0" prefHeight="508.0" prefWidth="349.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                                    </children>
+                                                                </AnchorPane>
+                                                            </content>
+                                                        </Tab>
+                                                    </tabs>
+                                                </JFXTabPane>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane prefHeight="596.0" prefWidth="361.0">
+                                            <children>
+                                                <Label layoutY="-3.0" prefHeight="34.0" prefWidth="303.0" text="HÓA ĐƠN">
+                                                    <textFill>
+                                                        <LinearGradient endY="1.0" startY="0.3761904761904762">
+                                                            <stops>
+                                                                <Stop color="#653252" />
+                                                                <Stop color="#d0a3c8" offset="1.0" />
+                                                            </stops>
+                                                        </LinearGradient>
+                                                    </textFill>
+                                                    <padding>
+                                                        <Insets left="7.0" />
+                                                    </padding>
+                                                    <font>
+                                                        <Font name="System Bold" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <GridPane layoutX="7.0" layoutY="11.0" prefHeight="51.0" prefWidth="288.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="92.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="196.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <Label fx:id="soBanBill" alignment="CENTER_RIGHT" prefHeight="44.0" prefWidth="196.0" GridPane.columnIndex="1">
+                                                            <font>
+                                                                <Font name="System Bold" size="45.0" />
+                                                            </font>
+                                                            <padding>
+                                                                <Insets right="10.0" />
+                                                            </padding>
+                                                        </Label>
+                                                        <Label prefHeight="56.0" prefWidth="92.0" text="BÀN SỐ" textFill="#c1368a" />
+                                                    </children>
+                                                </GridPane>
+                                                <GridPane layoutX="7.0" layoutY="425.0" prefHeight="39.0" prefWidth="288.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.0" minWidth="10.0" prefWidth="99.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="158.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="33.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <Label prefHeight="39.0" prefWidth="97.0" text="TỔNG TIỀN" textFill="#188f5f">
+                                                            <font>
+                                                                <Font name="System Bold" size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label alignment="CENTER" prefHeight="57.0" prefWidth="87.0" text="VND" textFill="#b28484" GridPane.columnIndex="2">
+                                                            <font>
+                                                                <Font name="Bauhaus 93" size="13.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="txtTongTienBill" alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="155.0" text="0" GridPane.columnIndex="1">
+                                                            <font>
+                                                                <Font name="System Bold" size="14.0" />
+                                                            </font>
+                                                            <GridPane.margin>
+                                                                <Insets right="5.0" />
+                                                            </GridPane.margin>
+                                                        </Label>
+                                                    </children>
+                                                </GridPane>
+                                                <GridPane layoutX="7.0" layoutY="479.0" prefHeight="46.0" prefWidth="288.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <JFXButton fx:id="btnInBill" onAction="#onActionBill" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #40c4ae;" text="IN" textFill="WHITE">
+                                                            <graphic>
+                                                                <ImageView fitHeight="31.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../pkgImages/Admin/Print_38px.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                            <font>
+                                                                <Font name="Bauhaus 93" size="14.0" />
+                                                            </font>
+                                                        </JFXButton>
+                                                        <JFXButton fx:id="btnTinhBill" onAction="#onActionBill" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #c4404b;" text="TÍNH" textFill="WHITE" GridPane.columnIndex="1">
+                                                            <graphic>
+                                                                <ImageView fitHeight="35.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../pkgImages/Admin/Dollar-38.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                            <font>
+                                                                <Font name="Bauhaus 93" size="13.0" />
+                                                            </font>
+                                                        </JFXButton>
+                                                    </children>
+                                                </GridPane>
+                                                <GridPane layoutX="7.0" layoutY="528.0" prefHeight="46.0" prefWidth="288.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <JFXButton fx:id="btnMayTinhBill" onAction="#onActionBill" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #d7e5e1;" text="MÁY TÍNH" textFill="#3a7249">
+                                                            <graphic>
+                                                                <ImageView fitHeight="31.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../pkgImages/Admin/Calculator_48px_1.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                            <font>
+                                                                <Font name="Bauhaus 93" size="14.0" />
+                                                            </font>
+                                                        </JFXButton>
+                                                        <JFXButton fx:id="btnXoaBill" onAction="#onActionBill" prefHeight="67.0" prefWidth="140.0" style="-fx-background-color: #dae88d;" text="XEM ĐÃ CHỌN" textFill="#3a7249" GridPane.columnIndex="1">
+                                                            <graphic>
+                                                                <ImageView fitHeight="31.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../pkgImages/Admin/Cafe_38px.png" />
+                                                                    </image>
+                                                                </ImageView>
+                                                            </graphic>
+                                                            <font>
+                                                                <Font name="System Bold" size="10.0" />
+                                                            </font>
+                                                        </JFXButton>
+                                                    </children>
+                                                </GridPane>
+                                                <Separator layoutX="1.0" layoutY="62.0" prefHeight="7.0" prefWidth="303.0" />
+                                                <Label fx:id="lblNameAddToBill" layoutX="93.0" layoutY="66.0" prefHeight="25.0" prefWidth="201.0" text="TÊN ĐỒ UỐNG" textFill="#182086">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="lblPriceAddToBill" alignment="CENTER_RIGHT" layoutX="93.0" layoutY="83.0" prefHeight="17.0" prefWidth="201.0" text="Giá : 0 Đồng" />
+                                                <JFXButton fx:id="btnAddToBill" layoutX="236.0" layoutY="109.0" onAction="#onActionBill" prefHeight="25.0" prefWidth="59.0" style="-fx-background-color: #1fad7f;" text="THÊM" textFill="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </JFXButton>
+                                                <JFXTextField fx:id="txtSLAddToBill" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="133.0" layoutY="105.0" prefHeight="20.0" prefWidth="59.0" promptText="0" unFocusColor="WHITE">
+                                                    <font>
+                                                        <Font name="System Bold" size="17.0" />
+                                                    </font>
+                                                </JFXTextField>
+                                                <AnchorPane fx:id="imgAddToBill" layoutX="9.0" layoutY="68.0" prefHeight="64.0" prefWidth="77.0" style="-fx-background-color: #ffffff;" />
+                                                <ImageView fx:id="btnCongAddToBill" fitHeight="31.0" fitWidth="33.0" layoutX="194.0" layoutY="106.0" onMouseClicked="#onMouseAddBill" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../pkgImages/Admin/Plus.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <ImageView fx:id="btnTruAddToBill" fitHeight="31.0" fitWidth="33.0" layoutX="100.0" layoutY="106.0" onMouseClicked="#onMouseAddBill" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../pkgImages/Admin/Minus.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <JFXTreeTableView fx:id="treeTableBill" layoutY="164.0" prefHeight="238.0" prefWidth="300.0" />
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                        <Separator layoutX="4.0" layoutY="52.0" prefHeight="7.0" prefWidth="1029.0" />
+                    </children>
+                </AnchorPane>           
+            </children>
+        </AnchorPane>
+        <GridPane layoutX="8.0" layoutY="117.0" prefHeight="423.0" prefWidth="130.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <JFXButton fx:id="btnTrangChuCoffee" alignment="BASELINE_LEFT" onAction="#onActionButton" prefHeight="64.0" prefWidth="151.0" style="-fx-background-color: ;" styleClass="menuleftAdmin" text="Trang chủ" textFill="#256b6f">
+                    <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: d8e3e4;">
+                            <image>
+                                <Image url="@../pkgImages/Admin/Home_38px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </JFXButton>
+                <JFXButton fx:id="btnHoaDonCoffee" alignment="BASELINE_LEFT" onAction="#onActionButton" prefHeight="64.0" prefWidth="139.0" styleClass="menuleftAdmin" text="Hóa đơn" textFill="#256b6f" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../pkgImages/Admin/Restaurant-38.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnHoTroCoffee" alignment="BASELINE_LEFT" onAction="#onActionButton" prefHeight="64.0" prefWidth="148.0" styleClass="menuleftAdmin" text="Hổ trợ" textFill="#256b6f" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../pkgImages/Admin/Customer%20Support_38px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnLogoutAdminCoffee" alignment="BASELINE_LEFT" onAction="#onActionButton" prefHeight="64.0" prefWidth="152.0" styleClass="menuleftAdmin" text="Đăng xuất" textFill="#256b6f" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" styleClass="menuleftAdmin">
+                            <image>
+                                <Image url="@../pkgImages/Admin/Close%20Sign_38px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnMenuCoffee" alignment="BASELINE_LEFT" onAction="#onActionButton" prefHeight="64.0" prefWidth="140.0" styleClass="menuleftAdmin" text="Thực đơn" textFill="#256b6f" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../pkgImages/Admin/Menu38.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+                <JFXButton fx:id="btnThongKeCoffee" alignment="BASELINE_LEFT" onAction="#onActionButton" prefHeight="64.0" prefWidth="135.0" styleClass="menuleftAdmin" text="Thống kê" textFill="#256b6f" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: d8e3e4;">
+                            <image>
+                                <Image url="@../pkgImages/Admin/Increase_38px_1.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </JFXButton>
+            </children>
+        </GridPane>
+        <Separator layoutX="147.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="652.0" prefWidth="0.0" />
+        <Polygon fill="#8b9bab" layoutX="74.0" layoutY="35.0" rotate="180.0" scaleX="1.5" scaleY="0.5" scaleZ="0.7" stroke="BLACK" strokeLineCap="BUTT" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0">
+            <points>
+                <Double fx:value="-50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="0.0" />
+                <Double fx:value="-60.0" />
+            </points>
+        </Polygon>
+        <Polygon fill="#8b9bab" layoutX="73.0" layoutY="610.0" scaleX="1.5" scaleY="0.5" scaleZ="0.7" stroke="BLACK" strokeLineCap="BUTT" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" translateY="26.0">
+            <points>
+                <Double fx:value="-50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="0.0" />
+                <Double fx:value="-60.0" />
+            </points>
+        </Polygon>
+    </children>
+</AnchorPane>
