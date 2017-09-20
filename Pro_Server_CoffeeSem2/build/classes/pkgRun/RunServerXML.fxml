@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="390.0" prefWidth="624.0" style="-fx-border-color: #00acc1;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgRun.RunServerXMLController">
+   <children>
+      <AnchorPane fx:id="anpLoading" prefHeight="390.0" prefWidth="624.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="237.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pkgImages/loading.gif" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="144.0" layoutY="265.0" prefHeight="17.0" prefWidth="336.0" text="ĐANG KẾT NỐI" textFill="#00acc1">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anpConnect" prefHeight="390.0" prefWidth="624.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="586.0" onMouseClicked="#onMouseClicked" prefHeight="43.0" prefWidth="38.0" text="x" textFill="#ee3434">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="244.0" layoutY="321.0" onAction="#onServerAction" prefHeight="43.0" prefWidth="137.0" style="-fx-background-color: #00acc1; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="KẾT NỐI" textFill="WHITE">
+               <font>
+                  <Font name="Candara" size="15.0" />
+               </font>
+            </JFXButton>
+            <Separator layoutX="19.0" layoutY="301.0" prefHeight="3.0" prefWidth="586.0" />
+            <ImageView fitHeight="251.0" fitWidth="258.0" layoutX="187.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pkgImages/connect.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="100.0" layoutY="271.0" prefHeight="17.0" prefWidth="424.0" text="BẬT KẾT NỐI ĐẾN CƠ SỞ DỬ LIỆU" textFill="#c9c4c4">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="109.0" layoutY="184.0" prefHeight="17.0" prefWidth="406.0" text="SYSTEM COFFEE" textFill="#bd4456">
+               <font>
+                  <Font name="Bauhaus 93" size="49.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+   <opaqueInsets>
+      <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+   </opaqueInsets>
+</AnchorPane>
